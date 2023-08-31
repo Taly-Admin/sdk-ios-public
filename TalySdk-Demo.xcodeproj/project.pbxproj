@@ -1,0 +1,505 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1F4E035C2AA0A631002B7A39 /* TalySdk.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F4E035B2AA0A630002B7A39 /* TalySdk.xcframework */; };
+		1F4E035D2AA0A631002B7A39 /* TalySdk.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1F4E035B2AA0A630002B7A39 /* TalySdk.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1FCB3E5D2A9336B90075FAD6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCB3E5C2A9336B90075FAD6 /* AppDelegate.swift */; };
+		1FCB3E5F2A9336B90075FAD6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCB3E5E2A9336B90075FAD6 /* SceneDelegate.swift */; };
+		1FCB3E642A9336B90075FAD6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FCB3E622A9336B90075FAD6 /* Main.storyboard */; };
+		1FCB3E662A9336BB0075FAD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FCB3E652A9336BB0075FAD6 /* Assets.xcassets */; };
+		1FCB3E692A9336BB0075FAD6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FCB3E672A9336BB0075FAD6 /* LaunchScreen.storyboard */; };
+		1FCB3E822A9343EB0075FAD6 /* UIViewController+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCB3E752A9343EB0075FAD6 /* UIViewController+Extention.swift */; };
+		1FCB3E832A9343EB0075FAD6 /* UIAlertController+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCB3E762A9343EB0075FAD6 /* UIAlertController+Extention.swift */; };
+		1FCB3E842A9343EB0075FAD6 /* UIColor+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCB3E772A9343EB0075FAD6 /* UIColor+Extention.swift */; };
+		1FCB3E852A9343EB0075FAD6 /* ModalPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCB3E782A9343EB0075FAD6 /* ModalPresenter.swift */; };
+		1FCB3E862A9343EB0075FAD6 /* UITextField+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCB3E792A9343EB0075FAD6 /* UITextField+Extention.swift */; };
+		1FCB3E872A9343EB0075FAD6 /* Manrope-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1FCB3E7B2A9343EB0075FAD6 /* Manrope-Medium.ttf */; };
+		1FCB3E882A9343EB0075FAD6 /* Manrope-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1FCB3E7C2A9343EB0075FAD6 /* Manrope-SemiBold.ttf */; };
+		1FCB3E892A9343EB0075FAD6 /* Manrope-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1FCB3E7D2A9343EB0075FAD6 /* Manrope-Bold.ttf */; };
+		1FCB3E8A2A9343EB0075FAD6 /* Manrope-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1FCB3E7E2A9343EB0075FAD6 /* Manrope-Regular.ttf */; };
+		2A2DDA892A9E203900203201 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2A2DDA842A9E203900203201 /* Localizable.strings */; };
+		2ABAA4BD2A948ED40051D6AE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABAA4B92A948ED40051D6AE /* ViewController.swift */; };
+		2ABAA4BE2A948ED40051D6AE /* SuccessFailurePopupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABAA4BA2A948ED40051D6AE /* SuccessFailurePopupVC.swift */; };
+		2ABAA4BF2A948ED40051D6AE /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABAA4BB2A948ED40051D6AE /* LoginVC.swift */; };
+		2ABAA4C02A948ED40051D6AE /* TalyInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABAA4BC2A948ED40051D6AE /* TalyInfoVC.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1FCB3E8F2A93446E0075FAD6 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				1F4E035D2AA0A631002B7A39 /* TalySdk.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		1F4E035B2AA0A630002B7A39 /* TalySdk.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = TalySdk.xcframework; sourceTree = "<group>"; };
+		1FCB3E592A9336B90075FAD6 /* TalySdk-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TalySdk-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FCB3E5C2A9336B90075FAD6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1FCB3E5E2A9336B90075FAD6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		1FCB3E632A9336B90075FAD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1FCB3E652A9336BB0075FAD6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1FCB3E682A9336BB0075FAD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1FCB3E6A2A9336BB0075FAD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1FCB3E752A9343EB0075FAD6 /* UIViewController+Extention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extention.swift"; sourceTree = "<group>"; };
+		1FCB3E762A9343EB0075FAD6 /* UIAlertController+Extention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Extention.swift"; sourceTree = "<group>"; };
+		1FCB3E772A9343EB0075FAD6 /* UIColor+Extention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extention.swift"; sourceTree = "<group>"; };
+		1FCB3E782A9343EB0075FAD6 /* ModalPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalPresenter.swift; sourceTree = "<group>"; };
+		1FCB3E792A9343EB0075FAD6 /* UITextField+Extention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+Extention.swift"; sourceTree = "<group>"; };
+		1FCB3E7B2A9343EB0075FAD6 /* Manrope-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-Medium.ttf"; sourceTree = "<group>"; };
+		1FCB3E7C2A9343EB0075FAD6 /* Manrope-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-SemiBold.ttf"; sourceTree = "<group>"; };
+		1FCB3E7D2A9343EB0075FAD6 /* Manrope-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-Bold.ttf"; sourceTree = "<group>"; };
+		1FCB3E7E2A9343EB0075FAD6 /* Manrope-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-Regular.ttf"; sourceTree = "<group>"; };
+		2A2DDA852A9E203900203201 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Localizable.strings; sourceTree = "<group>"; };
+		2ABAA4B92A948ED40051D6AE /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2ABAA4BA2A948ED40051D6AE /* SuccessFailurePopupVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuccessFailurePopupVC.swift; sourceTree = "<group>"; };
+		2ABAA4BB2A948ED40051D6AE /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		2ABAA4BC2A948ED40051D6AE /* TalyInfoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalyInfoVC.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1FCB3E562A9336B90075FAD6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F4E035C2AA0A631002B7A39 /* TalySdk.xcframework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1FCB3E502A9336B90075FAD6 = {
+			isa = PBXGroup;
+			children = (
+				1FCB3E5B2A9336B90075FAD6 /* TalySdk-Demo */,
+				1FCB3E5A2A9336B90075FAD6 /* Products */,
+				1FCB3E8B2A93446E0075FAD6 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		1FCB3E5A2A9336B90075FAD6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1FCB3E592A9336B90075FAD6 /* TalySdk-Demo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1FCB3E5B2A9336B90075FAD6 /* TalySdk-Demo */ = {
+			isa = PBXGroup;
+			children = (
+				2A2DDA862A9E203900203201 /* ar.lproj */,
+				2A2DDA832A9E203900203201 /* en.lproj */,
+				1FCB3E742A9343EB0075FAD6 /* Extentions */,
+				1FCB3E7A2A9343EB0075FAD6 /* Fonts */,
+				1FCB3E702A9343EA0075FAD6 /* Views */,
+				1FCB3E5C2A9336B90075FAD6 /* AppDelegate.swift */,
+				1FCB3E5E2A9336B90075FAD6 /* SceneDelegate.swift */,
+				1FCB3E622A9336B90075FAD6 /* Main.storyboard */,
+				1FCB3E652A9336BB0075FAD6 /* Assets.xcassets */,
+				1FCB3E672A9336BB0075FAD6 /* LaunchScreen.storyboard */,
+				1FCB3E6A2A9336BB0075FAD6 /* Info.plist */,
+			);
+			path = "TalySdk-Demo";
+			sourceTree = "<group>";
+		};
+		1FCB3E702A9343EA0075FAD6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2ABAA4B82A948ED40051D6AE /* Views */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1FCB3E742A9343EB0075FAD6 /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				1FCB3E752A9343EB0075FAD6 /* UIViewController+Extention.swift */,
+				1FCB3E762A9343EB0075FAD6 /* UIAlertController+Extention.swift */,
+				1FCB3E772A9343EB0075FAD6 /* UIColor+Extention.swift */,
+				1FCB3E782A9343EB0075FAD6 /* ModalPresenter.swift */,
+				1FCB3E792A9343EB0075FAD6 /* UITextField+Extention.swift */,
+			);
+			path = Extentions;
+			sourceTree = "<group>";
+		};
+		1FCB3E7A2A9343EB0075FAD6 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				1FCB3E7B2A9343EB0075FAD6 /* Manrope-Medium.ttf */,
+				1FCB3E7C2A9343EB0075FAD6 /* Manrope-SemiBold.ttf */,
+				1FCB3E7D2A9343EB0075FAD6 /* Manrope-Bold.ttf */,
+				1FCB3E7E2A9343EB0075FAD6 /* Manrope-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		1FCB3E8B2A93446E0075FAD6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1F4E035B2AA0A630002B7A39 /* TalySdk.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2A2DDA832A9E203900203201 /* en.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				2A2DDA842A9E203900203201 /* Localizable.strings */,
+			);
+			path = en.lproj;
+			sourceTree = "<group>";
+		};
+		2A2DDA862A9E203900203201 /* ar.lproj */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ar.lproj;
+			sourceTree = "<group>";
+		};
+		2ABAA4B82A948ED40051D6AE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2ABAA4B92A948ED40051D6AE /* ViewController.swift */,
+				2ABAA4BA2A948ED40051D6AE /* SuccessFailurePopupVC.swift */,
+				2ABAA4BB2A948ED40051D6AE /* LoginVC.swift */,
+				2ABAA4BC2A948ED40051D6AE /* TalyInfoVC.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1FCB3E582A9336B90075FAD6 /* TalySdk-Demo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1FCB3E6D2A9336BB0075FAD6 /* Build configuration list for PBXNativeTarget "TalySdk-Demo" */;
+			buildPhases = (
+				1FCB3E552A9336B90075FAD6 /* Sources */,
+				1FCB3E562A9336B90075FAD6 /* Frameworks */,
+				1FCB3E572A9336B90075FAD6 /* Resources */,
+				1FCB3E8F2A93446E0075FAD6 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "TalySdk-Demo";
+			productName = "TalySdk-Demo";
+			productReference = 1FCB3E592A9336B90075FAD6 /* TalySdk-Demo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1FCB3E512A9336B90075FAD6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					1FCB3E582A9336B90075FAD6 = {
+						CreatedOnToolsVersion = 14.3;
+					};
+				};
+			};
+			buildConfigurationList = 1FCB3E542A9336B90075FAD6 /* Build configuration list for PBXProject "TalySdk-Demo" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1FCB3E502A9336B90075FAD6;
+			productRefGroup = 1FCB3E5A2A9336B90075FAD6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1FCB3E582A9336B90075FAD6 /* TalySdk-Demo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1FCB3E572A9336B90075FAD6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FCB3E892A9343EB0075FAD6 /* Manrope-Bold.ttf in Resources */,
+				1FCB3E872A9343EB0075FAD6 /* Manrope-Medium.ttf in Resources */,
+				1FCB3E8A2A9343EB0075FAD6 /* Manrope-Regular.ttf in Resources */,
+				1FCB3E692A9336BB0075FAD6 /* LaunchScreen.storyboard in Resources */,
+				1FCB3E662A9336BB0075FAD6 /* Assets.xcassets in Resources */,
+				2A2DDA892A9E203900203201 /* Localizable.strings in Resources */,
+				1FCB3E882A9343EB0075FAD6 /* Manrope-SemiBold.ttf in Resources */,
+				1FCB3E642A9336B90075FAD6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1FCB3E552A9336B90075FAD6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FCB3E5D2A9336B90075FAD6 /* AppDelegate.swift in Sources */,
+				1FCB3E822A9343EB0075FAD6 /* UIViewController+Extention.swift in Sources */,
+				2ABAA4BF2A948ED40051D6AE /* LoginVC.swift in Sources */,
+				1FCB3E862A9343EB0075FAD6 /* UITextField+Extention.swift in Sources */,
+				1FCB3E842A9343EB0075FAD6 /* UIColor+Extention.swift in Sources */,
+				2ABAA4BD2A948ED40051D6AE /* ViewController.swift in Sources */,
+				2ABAA4C02A948ED40051D6AE /* TalyInfoVC.swift in Sources */,
+				1FCB3E832A9343EB0075FAD6 /* UIAlertController+Extention.swift in Sources */,
+				1FCB3E5F2A9336B90075FAD6 /* SceneDelegate.swift in Sources */,
+				1FCB3E852A9343EB0075FAD6 /* ModalPresenter.swift in Sources */,
+				2ABAA4BE2A948ED40051D6AE /* SuccessFailurePopupVC.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1FCB3E622A9336B90075FAD6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1FCB3E632A9336B90075FAD6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1FCB3E672A9336BB0075FAD6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1FCB3E682A9336BB0075FAD6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		2A2DDA842A9E203900203201 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2A2DDA852A9E203900203201 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1FCB3E6B2A9336BB0075FAD6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1FCB3E6C2A9336BB0075FAD6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1FCB3E6E2A9336BB0075FAD6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 5;
+				DEVELOPMENT_TEAM = C4HXD82KC8;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "TalySdk-Demo/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Taly SDK";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Taly.sdkTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1FCB3E6F2A9336BB0075FAD6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 5;
+				DEVELOPMENT_TEAM = C4HXD82KC8;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "TalySdk-Demo/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Taly SDK";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Taly.sdkTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1FCB3E542A9336B90075FAD6 /* Build configuration list for PBXProject "TalySdk-Demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1FCB3E6B2A9336BB0075FAD6 /* Debug */,
+				1FCB3E6C2A9336BB0075FAD6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1FCB3E6D2A9336BB0075FAD6 /* Build configuration list for PBXNativeTarget "TalySdk-Demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1FCB3E6E2A9336BB0075FAD6 /* Debug */,
+				1FCB3E6F2A9336BB0075FAD6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1FCB3E512A9336B90075FAD6 /* Project object */;
+}

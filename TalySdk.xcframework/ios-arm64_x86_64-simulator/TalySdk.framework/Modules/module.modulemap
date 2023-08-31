@@ -1,0 +1,11 @@
+framework module TalySdk {
+  umbrella header "TalySdk.h"
+
+  export *
+  module * { export * }
+}
+
+module TalySdk.Swift {
+  header "TalySdk-Swift.h"
+  requires objc
+}

@@ -1,0 +1,620 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.8 (swiftlang-5.8.0.124.2 clang-1403.0.22.11.100)
+// swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name TalySdk
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import CoreTelephony
+import Foundation
+import Network
+import SQLite3
+import StoreKit
+import Swift
+import SystemConfiguration
+@_exported import TalySdk
+import UIKit
+import WebKit
+import _Concurrency
+import _StringProcessing
+public protocol MixpanelType {
+  func isValidNestedTypeAndValue() -> Swift.Bool
+  func equals(rhs: any TalySdk.MixpanelType) -> Swift.Bool
+}
+extension Swift.Optional : TalySdk.MixpanelType {
+  public func isValidNestedTypeAndValue() -> Swift.Bool
+  public func equals(rhs: any TalySdk.MixpanelType) -> Swift.Bool
+}
+extension Swift.String : TalySdk.MixpanelType {
+  public func isValidNestedTypeAndValue() -> Swift.Bool
+  public func equals(rhs: any TalySdk.MixpanelType) -> Swift.Bool
+}
+extension Foundation.NSString : TalySdk.MixpanelType {
+  public func isValidNestedTypeAndValue() -> Swift.Bool
+  public func equals(rhs: any TalySdk.MixpanelType) -> Swift.Bool
+}
+extension Foundation.NSNumber : TalySdk.MixpanelType {
+  public func isValidNestedTypeAndValue() -> Swift.Bool
+  public func equals(rhs: any TalySdk.MixpanelType) -> Swift.Bool
+}
+extension Swift.Int : TalySdk.MixpanelType {
+  public func isValidNestedTypeAndValue() -> Swift.Bool
+  public func equals(rhs: any TalySdk.MixpanelType) -> Swift.Bool
+}
+extension Swift.UInt : TalySdk.MixpanelType {
+  public func isValidNestedTypeAndValue() -> Swift.Bool
+  public func equals(rhs: any TalySdk.MixpanelType) -> Swift.Bool
+}
+extension Swift.Double : TalySdk.MixpanelType {
+  public func isValidNestedTypeAndValue() -> Swift.Bool
+  public func equals(rhs: any TalySdk.MixpanelType) -> Swift.Bool
+}
+extension Swift.Float : TalySdk.MixpanelType {
+  public func isValidNestedTypeAndValue() -> Swift.Bool
+  public func equals(rhs: any TalySdk.MixpanelType) -> Swift.Bool
+}
+extension Swift.Bool : TalySdk.MixpanelType {
+  public func isValidNestedTypeAndValue() -> Swift.Bool
+  public func equals(rhs: any TalySdk.MixpanelType) -> Swift.Bool
+}
+extension Foundation.Date : TalySdk.MixpanelType {
+  public func isValidNestedTypeAndValue() -> Swift.Bool
+  public func equals(rhs: any TalySdk.MixpanelType) -> Swift.Bool
+}
+extension Foundation.URL : TalySdk.MixpanelType {
+  public func isValidNestedTypeAndValue() -> Swift.Bool
+  public func equals(rhs: any TalySdk.MixpanelType) -> Swift.Bool
+}
+extension Foundation.NSNull : TalySdk.MixpanelType {
+  public func isValidNestedTypeAndValue() -> Swift.Bool
+  public func equals(rhs: any TalySdk.MixpanelType) -> Swift.Bool
+}
+extension Swift.Array : TalySdk.MixpanelType {
+  public func isValidNestedTypeAndValue() -> Swift.Bool
+  public func equals(rhs: any TalySdk.MixpanelType) -> Swift.Bool
+}
+extension Foundation.NSArray : TalySdk.MixpanelType {
+  public func isValidNestedTypeAndValue() -> Swift.Bool
+  public func equals(rhs: any TalySdk.MixpanelType) -> Swift.Bool
+}
+extension Swift.Dictionary : TalySdk.MixpanelType {
+  public func isValidNestedTypeAndValue() -> Swift.Bool
+  public func equals(rhs: any TalySdk.MixpanelType) -> Swift.Bool
+}
+@_hasMissingDesignatedInitializers open class People {
+  open var ignoreTime: Swift.Bool
+  open func set(properties: TalySdk.Properties)
+  open func set(property: Swift.String, to: any TalySdk.MixpanelType)
+  open func setOnce(properties: TalySdk.Properties)
+  open func unset(properties: [Swift.String])
+  open func increment(properties: TalySdk.Properties)
+  open func increment(property: Swift.String, by: Swift.Double)
+  open func append(properties: TalySdk.Properties)
+  open func remove(properties: TalySdk.Properties)
+  open func union(properties: TalySdk.Properties)
+  open func trackCharge(amount: Swift.Double, properties: TalySdk.Properties? = nil)
+  open func clearCharges()
+  open func deleteUser()
+  @objc deinit
+}
+extension UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public func centerXYAnchor(to view: UIKit.UIView, yOffset: CoreFoundation.CGFloat = 0, leftOrRightOffset: CoreFoundation.CGFloat? = nil)
+  @_Concurrency.MainActor(unsafe) public func allEdgeAnchor(to view: UIKit.UIView, top: CoreFoundation.CGFloat = 0, left: CoreFoundation.CGFloat = 0, right: CoreFoundation.CGFloat = 0, bottom: CoreFoundation.CGFloat = 0)
+}
+extension UIKit.UIColor {
+  public static func hexStringToUIColor(hex: Swift.String) -> UIKit.UIColor
+  public static var textColor: UIKit.UIColor
+  public static var themeBlackColor: UIKit.UIColor
+  public static var themeLightColor: UIKit.UIColor
+  public static var themeColor: UIKit.UIColor
+  public static var themeBorderColor: UIKit.UIColor
+}
+@_hasMissingDesignatedInitializers public class MyFont {
+  public static func registerCustomFont1(filenameString: Swift.String)
+  @objc deinit
+}
+public struct WebResource {
+  public init(withUrlPath urlPath: TalySdk.URLPath, forHttpMethod method: TalySdk.HttpMethods, requestBody: Foundation.Data? = nil, contentType: Swift.String? = "application/x-www-form-urlencoded", isBasicAuthorization: Swift.Bool? = false)
+}
+public struct CommonError : Swift.Codable {
+  public let error: Swift.String?
+  public let error_description: Swift.String?
+  public init(error: Swift.String, description: Swift.String)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+@_hasMissingDesignatedInitializers public class Utils {
+  public static var token: Swift.String {
+    get
+    set
+  }
+  public static var expiresIn: Swift.Int {
+    get
+    set
+  }
+  public static var userName: Swift.String {
+    get
+    set
+  }
+  public static var password: Swift.String {
+    get
+    set
+  }
+  public static var environment: Swift.String {
+    get
+    set
+  }
+  public static var languageCode: Swift.String? {
+    get
+    set
+  }
+  public static func updateProperties(token: Swift.String? = nil, expiresIn: Swift.Int? = nil, userName: Swift.String? = nil, password: Swift.String? = nil, languageCode: Swift.String? = nil, environment: Swift.String? = nil)
+  public static func convertIntoString<T>(_ value: T) -> Swift.String where T : Swift.Decodable, T : Swift.Encodable
+  @objc deinit
+}
+public protocol PlaceOrderDelegate : AnyObject {
+  func didFinishPlaceOrderWithSuccess(successOrderDetails: TalySdk.OrderDetails)
+  func didFinishPlaceOrderWithError(error: TalySdk.OtherErrorResponse)
+  func didFinishPlaceOrderWithFailure(failureOrderDetail: TalySdk.OrderDetails)
+}
+public protocol BannerViewDelegate : AnyObject {
+  func didGetBannerDetail(bannerResponse: [TalySdk.BannerResponse])
+  func didGetError()
+  func didInfoButtonTap(url: Swift.String)
+}
+extension Swift.Error {
+  public func getStatusAndMessage() -> (status: Swift.String, message: Swift.String, apiName: Swift.String)
+}
+public enum AppError : Swift.Error {
+  case unknown
+  case noInternet
+  case connection
+  case server
+  case timeOut
+  case internalServerError(any Swift.Error, Swift.Int)
+  case error403
+  case error404
+  case error500
+  case userNotFound
+  case noData
+  case canNotParse
+  case unauthorizedAccess
+  case sessionExpired401
+  case customNoRecords(image: UIKit.UIImage?, title: Swift.String?, message: Swift.String?)
+  case requestCanceled
+  case userNotAllowed
+  case unexpectedValueInResponseData
+  case customWithOptionText(Swift.String?)
+  case custom(Swift.String, Swift.String?, Swift.String?)
+}
+extension TalySdk.AppError {
+  public var status: Swift.String? {
+    get
+  }
+  public var errorMessage: Swift.String? {
+    get
+  }
+  public var apiName: Swift.String? {
+    get
+  }
+}
+public enum AppResult<T, A> {
+  case value(T)
+  case error(A, Swift.Int)
+}
+@_hasMissingDesignatedInitializers public class Constant {
+  final public let errrorText: Swift.String
+  @objc deinit
+}
+public struct OrderResource {
+  public init()
+  #if compiler(>=5.3) && $AsyncAwait
+  public func getToken(tokenRequest: TalySdk.TokenRequest) async throws -> TalySdk.AppResult<TalySdk.TokenResponse, TalySdk.CommonError>
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func createOrder(data: TalySdk.OrderRequest) async throws -> TalySdk.AppResult<TalySdk.CreateOrderResponse, TalySdk.OtherErrorResponse>
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func getOrderDetail(id: Swift.Int) async throws -> TalySdk.AppResult<TalySdk.OrderDetail, TalySdk.OtherErrorResponse>
+  #endif
+}
+public struct OrderDetail : Swift.Codable {
+  public let orderToken: Swift.String
+  public let branchId: Swift.Int
+  public let orderDate: Swift.String
+  public let status: Swift.String
+  public let paymentPlanId: Swift.String?
+  public let redirectUrl: Swift.String
+  public let paymentPlanName: Swift.String?
+  public let branchType: Swift.String
+  public let branchName: Swift.String
+  public let settlementType: Swift.String
+  public let totalReturnAmount: Swift.Double?
+  public let totalRefundAmount: Swift.Double?
+  public let merchantId: Swift.Int
+  public let merchantName: Swift.String
+  public let currency: Swift.String
+  public let talyOrderId: Swift.Int?
+  public let merchantOrderId: Swift.String
+  public let totalAmount: Swift.Double?
+  public let settlementStatus: Swift.String?
+  public let psp: TalySdk.PSP?
+  public let postBackUrl: Swift.String?
+  public let merchantLogo: Swift.String?
+  public func convertoSucessModel() -> TalySdk.OrderDetails
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct OrderDetails : Swift.Codable {
+  public let orderToken: Swift.String
+  public let branchId: Swift.Int
+  public let orderDate: Swift.String
+  public let status: Swift.String
+  public let paymentPlanId: Swift.String?
+  public let redirectUrl: Swift.String
+  public let paymentPlanName: Swift.String?
+  public let branchType: Swift.String
+  public let branchName: Swift.String
+  public let settlementType: Swift.String
+  public let totalReturnAmount: Swift.Double?
+  public let totalRefundAmount: Swift.Double?
+  public let merchantId: Swift.Int
+  public let merchantName: Swift.String
+  public let currency: Swift.String
+  public let talyOrderId: Swift.Int?
+  public let merchantOrderId: Swift.String
+  public let totalAmount: Swift.Double?
+  public let settlementStatus: Swift.String?
+  public let psp: TalySdk.PSP?
+  public let postBackUrl: Swift.String?
+  public let merchantLogo: Swift.String?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+extension TalySdk.OrderDetails : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+}
+public struct OtherErrorResponse : Swift.Codable {
+  public var status: Swift.String
+  public let message: Swift.String
+  public let errors: [Swift.String]
+  public var errorCode: Swift.String?
+  public let merchantOrderId: Swift.String?
+  public init(status: Swift.String, message: Swift.String, errors: [Swift.String], errorCode: Swift.String? = nil, merchantOrderId: Swift.String?)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct Installment : Swift.Codable {
+  public let id: Swift.Int
+  public let amount: Swift.Double
+  public let currency: Swift.String
+  public let dueDate: Swift.String
+  public let nbOfInstallment: Swift.Int
+  public let status: Swift.String
+  public let finalAmount: Swift.Double
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct TokenRequest : Swift.Codable {
+  public let username: Swift.String
+  public let password: Swift.String
+  public let grantType: Swift.String
+  public let scope: Swift.String
+  public init(username: Swift.String, password: Swift.String, grantType: Swift.String, scope: Swift.String)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public protocol MixpanelDelegate : AnyObject {
+  func mixpanelWillFlush(_ mixpanel: TalySdk.MixpanelInstance) -> Swift.Bool
+}
+public typealias Properties = [Swift.String : any TalySdk.MixpanelType]
+@_hasMissingDesignatedInitializers open class MixpanelInstance : Swift.CustomDebugStringConvertible {
+  open var apiToken: Swift.String
+  weak open var delegate: (any TalySdk.MixpanelDelegate)?
+  open var distinctId: Swift.String
+  open var anonymousId: Swift.String?
+  open var userId: Swift.String?
+  open var hadPersistedDistinctId: Swift.Bool?
+  open var alias: Swift.String?
+  open var people: TalySdk.People!
+  open var showNetworkActivityIndicator: Swift.Bool
+  open var trackAutomaticEventsEnabled: Swift.Bool
+  open var flushInterval: Swift.Double {
+    get
+    set
+  }
+  open var flushOnBackground: Swift.Bool {
+    get
+    set
+  }
+  open var useIPAddressForGeoLocation: Swift.Bool {
+    get
+    set
+  }
+  open var serverURL: Swift.String {
+    get
+    set
+  }
+  open var debugDescription: Swift.String {
+    get
+  }
+  open var loggingEnabled: Swift.Bool {
+    get
+    set
+  }
+  final public let name: Swift.String
+  open var minimumSessionDuration: Swift.UInt64 {
+    get
+    set
+  }
+  open var maximumSessionDuration: Swift.UInt64 {
+    get
+    set
+  }
+  @objc deinit
+}
+extension TalySdk.MixpanelInstance {
+  public func identify(distinctId: Swift.String, usePeople: Swift.Bool = true, completion: (() -> Swift.Void)? = nil)
+  public func createAlias(_ alias: Swift.String, distinctId: Swift.String, usePeople: Swift.Bool = true, andIdentify: Swift.Bool = true, completion: (() -> Swift.Void)? = nil)
+  public func reset(completion: (() -> Swift.Void)? = nil)
+}
+extension TalySdk.MixpanelInstance {
+  public func archive()
+}
+extension TalySdk.MixpanelInstance {
+  public func flush(performFullFlush: Swift.Bool = false, completion: (() -> Swift.Void)? = nil)
+}
+extension TalySdk.MixpanelInstance {
+  public func track(event: Swift.String?, properties: TalySdk.Properties? = nil)
+  public func trackWithGroups(event: Swift.String?, properties: TalySdk.Properties? = nil, groups: TalySdk.Properties?)
+  public func getGroup(groupKey: Swift.String, groupID: any TalySdk.MixpanelType) -> TalySdk.Group
+  public func time(event: Swift.String)
+  public func eventElapsedTime(event: Swift.String) -> Swift.Double
+  public func clearTimedEvents()
+  public func clearTimedEvent(event: Swift.String)
+  public func currentSuperProperties() -> [Swift.String : Any]
+  public func clearSuperProperties()
+  public func registerSuperProperties(_ properties: TalySdk.Properties)
+  public func registerSuperPropertiesOnce(_ properties: TalySdk.Properties, defaultValue: (any TalySdk.MixpanelType)? = nil)
+  public func unregisterSuperProperty(_ propertyName: Swift.String)
+  public func setGroup(groupKey: Swift.String, groupID: any TalySdk.MixpanelType)
+  public func setGroup(groupKey: Swift.String, groupIDs: [any TalySdk.MixpanelType])
+  public func addGroup(groupKey: Swift.String, groupID: any TalySdk.MixpanelType)
+  public func removeGroup(groupKey: Swift.String, groupID: any TalySdk.MixpanelType)
+  public func optOutTracking()
+  public func optInTracking(distinctId: Swift.String? = nil, properties: TalySdk.Properties? = nil)
+  public func hasOptedOutTracking() -> Swift.Bool
+}
+public class MXPanelViewModel {
+  public init(apiKey: Swift.String)
+  @objc deinit
+}
+extension TalySdk.MXPanelViewModel {
+  public func sdkInitialised()
+  public func authTokenServiceCalled()
+  public func authTokenSuccess()
+  public func authTokenFailure(errorCode: Swift.String, message: TalySdk.OtherErrorResponse)
+  public func createOrderServiceCalled(requestData: TalySdk.OrderRequest)
+  public func createOrderSuccess(createOrderResponse: TalySdk.CreateOrderResponse, requestData: TalySdk.OrderRequest)
+  public func createOrderFailure(requestData: TalySdk.OrderRequest, errorCode: Swift.String, errorResponse: TalySdk.OtherErrorResponse)
+  public func webviewOrderStatus(requestData: TalySdk.OrderRequest, createOrderResponse: TalySdk.CreateOrderResponse, status: Swift.String)
+  public func orderDetailsServiceCalled(merchantOrderId: Swift.String, talyOrderId: Swift.String)
+  public func orderDetailsSucess(orderDetail: TalySdk.OrderDetails, customerEmail: Swift.String?, requestData: TalySdk.OrderRequest)
+  public func orderDetailsFailure(requestData: TalySdk.OrderRequest, talyOrderId: Swift.String?, statusCode: Swift.String?, errorMessage: Swift.String?, errorResponse: TalySdk.OtherErrorResponse)
+  public func orderSuccessCallback(callbackData: TalySdk.OrderDetails, marchantOrderId: Swift.String)
+  public func orderFailureCallback(orderDetails: TalySdk.OrderDetails, marchantOrderId: Swift.String)
+  public func orderErrorCallback(callbackData: TalySdk.OtherErrorResponse, marchantOrderId: Swift.String)
+  public func noInternetConnection(requestData: TalySdk.OrderRequest, talyOrderId: Swift.String, apiName: Swift.String)
+}
+public struct CreateOrderResponse : Swift.Codable {
+  public let talyOrderId: Swift.Int
+  public let orderToken: Swift.String
+  public let merchantId: Swift.Int
+  public let merchantName: Swift.String
+  public let branchName: Swift.String
+  public let totalAmount: Swift.Double
+  public let currency: Swift.String
+  public let orderDate: Swift.String
+  public let orderStatus: Swift.String
+  public let secureCheckoutUrl: Swift.String
+  public let redirectUrl: Swift.String?
+  public let language: Swift.String
+  public let postBackUrl: Swift.String?
+  public let merchantLogo: Swift.String?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct BannerResource {
+  public init()
+  #if compiler(>=5.3) && $AsyncAwait
+  public func getBannerData(data: TalySdk.BannerRequest) async throws -> TalySdk.AppResult<[TalySdk.BannerResponse], TalySdk.CommonError>
+  #endif
+}
+public struct OrderRequest : Swift.Codable {
+  public var merchantOrderId: Swift.String
+  public var language: Swift.String
+  public var subTotal: Swift.Double
+  public var totalAmount: Swift.Double
+  public var currency: Swift.String
+  public var discountAmount: Swift.Double
+  public var taxAmount: Swift.Double
+  public var deliveryAmount: Swift.Double
+  public var deliveryMethod: Swift.String
+  public var otherFee: Swift.Double?
+  public var psp: TalySdk.PSP?
+  public var orderItems: [TalySdk.OrderItem]
+  public var isDigitalOrder: Swift.Bool
+  public var customerDetails: TalySdk.CustomerDetails?
+  public var deliveryAddress: TalySdk.DeliveryAddress?
+  public var merchantRedirectUrl: Swift.String
+  public var platform: Swift.String
+  public var isMobile: Swift.Bool
+  public let postBackUrl: Swift.String?
+  public let merchantLogo: Swift.String?
+  public init(merchantOrderId: Swift.String, language: Swift.String = "en", subtotal: Swift.Double, totalAmount: Swift.Double, currency: Swift.String, discountAmount: Swift.Double, taxAmount: Swift.Double, deliveryAmount: Swift.Double, deliveryMethod: Swift.String, otherFees: Swift.Double? = nil, psp: TalySdk.PSP? = nil, orderItems: [TalySdk.OrderItem], isDigitalOrder: Swift.Bool = false, customerDetails: TalySdk.CustomerDetails? = nil, deliveryAddress: TalySdk.DeliveryAddress? = nil, merchantRedirectURL: Swift.String, postBackUrl: Swift.String? = nil, merchantLogo: Swift.String? = nil)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct PSP : Swift.Codable {
+  public init(isPspOrder: Swift.Bool = false, pspProvider: Swift.String? = nil, subMerchantId: Swift.Int? = nil, subMerchantName: Swift.String? = nil)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct OrderItem : Swift.Codable {
+  public init(sku: Swift.String, type: Swift.String? = nil, name: Swift.String, itemDescription: Swift.String? = nil, quantity: Swift.Int, itemPrice: Swift.Double, imageUrl: Swift.String? = nil, itemUrl: Swift.String? = nil, itemUnit: Swift.String? = nil, itemSize: Swift.String? = nil, itemColor: Swift.String? = nil, itemGender: Swift.String? = nil, itemBrand: Swift.String? = nil, itemCategory: Swift.String? = nil, currency: Swift.String? = nil)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct CustomerDetails : Swift.Codable {
+  public var customerEmail: Swift.String?
+  public init(firstName: Swift.String? = nil, lastName: Swift.String? = nil, gender: Swift.String? = nil, countryCode: Swift.String? = nil, phoneNumber: Swift.String? = nil, customerEmail: Swift.String? = nil, registeredSince: Swift.String? = nil, loyaltyMember: Swift.Bool? = nil, loyaltyLevel: Swift.String? = nil)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct DeliveryAddress : Swift.Codable {
+  public init(city: Swift.String? = nil, area: Swift.String? = nil, fullAddress: Swift.String? = nil, phoneNumber: Swift.String? = nil, customerEmail: Swift.String? = nil)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public enum io_talyVersion {
+  public static let versionString: Swift.String
+}
+extension Swift.String {
+  public var localized: Swift.String {
+    get
+  }
+}
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class BannerView : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) weak public var delegate: (any TalySdk.BannerViewDelegate)?
+  @_Concurrency.MainActor(unsafe) public var amount: Swift.String {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var isShowCustomView: Swift.Bool {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public init(frame: CoreFoundation.CGRect, userName: Swift.String, password: Swift.String, name: Swift.String, quantity: Swift.Int, amount: Swift.String, currency: Swift.String)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers open class Group {
+  open func set(properties: TalySdk.Properties)
+  open func set(property: Swift.String, to: any TalySdk.MixpanelType)
+  open func setOnce(properties: TalySdk.Properties)
+  open func unset(property: Swift.String)
+  open func remove(key: Swift.String, value: any TalySdk.MixpanelType)
+  open func union(key: Swift.String, values: [any TalySdk.MixpanelType])
+  open func deleteGroup()
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers open class Mixpanel {
+  @discardableResult
+  open class func initialize(token apiToken: Swift.String, trackAutomaticEvents: Swift.Bool, flushInterval: Swift.Double = 60, instanceName: Swift.String? = nil, optOutTrackingByDefault: Swift.Bool = false, useUniqueDistinctId: Swift.Bool = false, superProperties: TalySdk.Properties? = nil, serverURL: Swift.String? = nil) -> TalySdk.MixpanelInstance
+  open class func getInstance(name: Swift.String) -> TalySdk.MixpanelInstance?
+  open class func mainInstance() -> TalySdk.MixpanelInstance
+  open class func setMainInstance(name: Swift.String)
+  open class func removeInstance(name: Swift.String)
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class PlaceOrderView : UIKit.UIViewController, WebKit.WKUIDelegate {
+  @_Concurrency.MainActor(unsafe) weak public var delegate: (any TalySdk.PlaceOrderDelegate)?
+  @_Concurrency.MainActor(unsafe) public var activityIndicatorColor: UIKit.UIColor {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var navigationBarTitleColor: UIKit.UIColor {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public init(orderRequest: TalySdk.OrderRequest, tokenRequest: TalySdk.TokenRequest, environment: TalySdk.URLHost, languageCode: Swift.String? = "en")
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
+  @objc deinit
+}
+extension TalySdk.PlaceOrderView : WebKit.WKNavigationDelegate {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func webView(_ webView: WebKit.WKWebView, decidePolicyFor navigationAction: WebKit.WKNavigationAction, decisionHandler: @escaping (WebKit.WKNavigationActionPolicy) -> Swift.Void)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func webView(_ webView: WebKit.WKWebView, didFinish navigation: WebKit.WKNavigation!)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func webView(_ webView: WebKit.WKWebView, didStartProvisionalNavigation navigation: WebKit.WKNavigation!)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func webView(_ webView: WebKit.WKWebView, didFail navigation: WebKit.WKNavigation!, withError error: any Swift.Error)
+}
+public enum URLPath {
+  case token(username: Swift.String, password: Swift.String, grantType: Swift.String, scope: Swift.String)
+  case refreshToken(grantType: Swift.String, token: Swift.String)
+  case paymentOptions
+  case expectedInstallments
+  case createOrder
+  case getOrderDetail(id: Swift.Int)
+  case bannerRequest
+}
+extension TalySdk.URLPath {
+  public var path: Swift.String {
+    get
+  }
+  public var apiName: Swift.String {
+    get
+  }
+}
+extension TalySdk.URLPath : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+}
+public struct BannerResponse : Swift.Codable {
+  public let amount: Swift.Double
+  public let currency: Swift.String
+  public let dueDate: Swift.String
+  public let nbOfInstallment: Swift.Int
+  public let status: Swift.String
+  public let finalAmount: Swift.Double
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct BannerRequest : Swift.Codable {
+  public init(name: Swift.String, quantity: Swift.Int, unitPrice: Swift.Double, currency: Swift.String)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct WebServiceManager {
+  public init()
+  #if compiler(>=5.3) && $AsyncAwait
+  public static func postApiData<T, A>(resource: TalySdk.WebResource, resultType: T.Type, errorType: A.Type) async throws -> TalySdk.AppResult<T, A> where T : Swift.Decodable, A : Swift.Decodable, A : Swift.Encodable
+  #endif
+}
+public enum HttpMethods : Swift.String {
+  case get
+  case post
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum URLHost : Swift.String {
+  case dev
+  case production
+  public var mxPanelDevApikey: Swift.String {
+    get
+  }
+  public var environment: Swift.String {
+    get
+  }
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct TokenResponse : Swift.Codable {
+  public let accessToken: Swift.String
+  public let tokenType: Swift.String
+  public let refreshToken: Swift.String
+  public let expiresIn: Swift.Int
+  public let scope: Swift.String
+  public let jti: Swift.String
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+extension TalySdk.HttpMethods : Swift.Equatable {}
+extension TalySdk.HttpMethods : Swift.Hashable {}
+extension TalySdk.HttpMethods : Swift.RawRepresentable {}
+extension TalySdk.URLHost : Swift.Equatable {}
+extension TalySdk.URLHost : Swift.Hashable {}
+extension TalySdk.URLHost : Swift.RawRepresentable {}
