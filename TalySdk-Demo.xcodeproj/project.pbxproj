@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1F4E035C2AA0A631002B7A39 /* TalySdk.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F4E035B2AA0A630002B7A39 /* TalySdk.xcframework */; };
-		1F4E035D2AA0A631002B7A39 /* TalySdk.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1F4E035B2AA0A630002B7A39 /* TalySdk.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1FCB3E5D2A9336B90075FAD6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCB3E5C2A9336B90075FAD6 /* AppDelegate.swift */; };
 		1FCB3E5F2A9336B90075FAD6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCB3E5E2A9336B90075FAD6 /* SceneDelegate.swift */; };
 		1FCB3E642A9336B90075FAD6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FCB3E622A9336B90075FAD6 /* Main.storyboard */; };
@@ -28,16 +26,20 @@
 		2ABAA4BE2A948ED40051D6AE /* SuccessFailurePopupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABAA4BA2A948ED40051D6AE /* SuccessFailurePopupVC.swift */; };
 		2ABAA4BF2A948ED40051D6AE /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABAA4BB2A948ED40051D6AE /* LoginVC.swift */; };
 		2ABAA4C02A948ED40051D6AE /* TalyInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABAA4BC2A948ED40051D6AE /* TalyInfoVC.swift */; };
+		2AE995BF2AA89251009666C3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE995BE2AA89251009666C3 /* User.swift */; };
+		2AED8D572B3EA337003CBD8F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2AED8D552B3EA337003CBD8F /* Localizable.strings */; };
+		39D1BE952CFF16C100E65A21 /* TalySdk.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39D1BE932CFF16B600E65A21 /* TalySdk.xcframework */; };
+		39D1BE962CFF16C100E65A21 /* TalySdk.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 39D1BE932CFF16B600E65A21 /* TalySdk.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		1FCB3E8F2A93446E0075FAD6 /* Embed Frameworks */ = {
+		39D1BE922CFF161A00E65A21 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				1F4E035D2AA0A631002B7A39 /* TalySdk.xcframework in Embed Frameworks */,
+				39D1BE962CFF16C100E65A21 /* TalySdk.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -45,7 +47,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		1F4E035B2AA0A630002B7A39 /* TalySdk.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = TalySdk.xcframework; sourceTree = "<group>"; };
 		1FCB3E592A9336B90075FAD6 /* TalySdk-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TalySdk-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FCB3E5C2A9336B90075FAD6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1FCB3E5E2A9336B90075FAD6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +68,11 @@
 		2ABAA4BA2A948ED40051D6AE /* SuccessFailurePopupVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuccessFailurePopupVC.swift; sourceTree = "<group>"; };
 		2ABAA4BB2A948ED40051D6AE /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		2ABAA4BC2A948ED40051D6AE /* TalyInfoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalyInfoVC.swift; sourceTree = "<group>"; };
+		2AE995BE2AA89251009666C3 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		2AED8D532B3EA309003CBD8F /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
+		2AED8D542B3EA309003CBD8F /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		2AED8D562B3EA337003CBD8F /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = Localizable.strings; sourceTree = "<group>"; };
+		39D1BE932CFF16B600E65A21 /* TalySdk.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = TalySdk.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F4E035C2AA0A631002B7A39 /* TalySdk.xcframework in Frameworks */,
+				39D1BE952CFF16C100E65A21 /* TalySdk.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,7 +156,7 @@
 		1FCB3E8B2A93446E0075FAD6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1F4E035B2AA0A630002B7A39 /* TalySdk.xcframework */,
+				39D1BE932CFF16B600E65A21 /* TalySdk.xcframework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -166,6 +172,7 @@
 		2A2DDA862A9E203900203201 /* ar.lproj */ = {
 			isa = PBXGroup;
 			children = (
+				2AED8D552B3EA337003CBD8F /* Localizable.strings */,
 			);
 			path = ar.lproj;
 			sourceTree = "<group>";
@@ -177,6 +184,7 @@
 				2ABAA4BA2A948ED40051D6AE /* SuccessFailurePopupVC.swift */,
 				2ABAA4BB2A948ED40051D6AE /* LoginVC.swift */,
 				2ABAA4BC2A948ED40051D6AE /* TalyInfoVC.swift */,
+				2AE995BE2AA89251009666C3 /* User.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -191,7 +199,7 @@
 				1FCB3E552A9336B90075FAD6 /* Sources */,
 				1FCB3E562A9336B90075FAD6 /* Frameworks */,
 				1FCB3E572A9336B90075FAD6 /* Resources */,
-				1FCB3E8F2A93446E0075FAD6 /* Embed Frameworks */,
+				39D1BE922CFF161A00E65A21 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -224,6 +232,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ar,
 			);
 			mainGroup = 1FCB3E502A9336B90075FAD6;
 			productRefGroup = 1FCB3E5A2A9336B90075FAD6 /* Products */;
@@ -244,6 +253,7 @@
 				1FCB3E872A9343EB0075FAD6 /* Manrope-Medium.ttf in Resources */,
 				1FCB3E8A2A9343EB0075FAD6 /* Manrope-Regular.ttf in Resources */,
 				1FCB3E692A9336BB0075FAD6 /* LaunchScreen.storyboard in Resources */,
+				2AED8D572B3EA337003CBD8F /* Localizable.strings in Resources */,
 				1FCB3E662A9336BB0075FAD6 /* Assets.xcassets in Resources */,
 				2A2DDA892A9E203900203201 /* Localizable.strings in Resources */,
 				1FCB3E882A9343EB0075FAD6 /* Manrope-SemiBold.ttf in Resources */,
@@ -266,6 +276,7 @@
 				2ABAA4BD2A948ED40051D6AE /* ViewController.swift in Sources */,
 				2ABAA4C02A948ED40051D6AE /* TalyInfoVC.swift in Sources */,
 				1FCB3E832A9343EB0075FAD6 /* UIAlertController+Extention.swift in Sources */,
+				2AE995BF2AA89251009666C3 /* User.swift in Sources */,
 				1FCB3E5F2A9336B90075FAD6 /* SceneDelegate.swift in Sources */,
 				1FCB3E852A9343EB0075FAD6 /* ModalPresenter.swift in Sources */,
 				2ABAA4BE2A948ED40051D6AE /* SuccessFailurePopupVC.swift in Sources */,
@@ -279,6 +290,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				1FCB3E632A9336B90075FAD6 /* Base */,
+				2AED8D532B3EA309003CBD8F /* ar */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -287,6 +299,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				1FCB3E682A9336BB0075FAD6 /* Base */,
+				2AED8D542B3EA309003CBD8F /* ar */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -295,6 +308,14 @@
 			isa = PBXVariantGroup;
 			children = (
 				2A2DDA852A9E203900203201 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		2AED8D552B3EA337003CBD8F /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2AED8D562B3EA337003CBD8F /* ar */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -424,7 +445,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 16;
 				DEVELOPMENT_TEAM = C4HXD82KC8;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "TalySdk-Demo/Info.plist";
@@ -439,9 +460,14 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Taly.sdkTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -454,7 +480,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 16;
 				DEVELOPMENT_TEAM = C4HXD82KC8;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "TalySdk-Demo/Info.plist";
@@ -469,9 +495,13 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Taly.sdkTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

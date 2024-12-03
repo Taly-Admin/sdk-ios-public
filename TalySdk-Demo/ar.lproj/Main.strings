@@ -1,0 +1,30 @@
+
+/* Class = "UILabel"; text = "Please enter the Order ID (for testing duplicate order IDs)."; ObjectID = "1q2-wl-2MB"; */
+"1q2-wl-2MB.text" = "Please enter the Order ID (for testing duplicate order IDs).";
+
+/* Class = "UITextField"; placeholder = "Username"; ObjectID = "4Ot-MA-3Ff"; */
+"4Ot-MA-3Ff.placeholder" = "Username";
+
+/* Class = "UILabel"; text = "Payment Option View"; ObjectID = "58v-Po-0OZ"; */
+"58v-Po-0OZ.text" = "Payment Option View";
+
+/* Class = "UIButton"; normalTitle = "Proceed"; ObjectID = "Bfx-U3-MEl"; */
+"Bfx-U3-MEl.normalTitle" = "Proceed";
+
+/* Class = "UILabel"; text = "Aditional Details:"; ObjectID = "D46-TH-yXp"; */
+"D46-TH-yXp.text" = "Aditional Details:";
+
+/* Class = "UITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."; ObjectID = "F9U-38-UE3"; */
+"F9U-38-UE3.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.";
+
+/* Class = "UIButton"; normalTitle = "Production"; ObjectID = "Q0j-zQ-GAo"; */
+"Q0j-zQ-GAo.normalTitle" = "Production";
+
+/* Class = "UIButton"; normalTitle = "Login"; ObjectID = "SI3-Ak-KjL"; */
+"SI3-Ak-KjL.normalTitle" = "Login";
+
+/* Class = "UIButton"; normalTitle = "Development"; ObjectID = "k0N-M7-BhB"; */
+"k0N-M7-BhB.normalTitle" = "Development";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "t63-xj-UFB"; */
+"t63-xj-UFB.normalTitle" = "Cancel";

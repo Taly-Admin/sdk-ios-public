@@ -64,10 +64,8 @@ class LoginVC: UIViewController {
         devlopmentButton.setTitleColor(UIColor.white, for: .normal)
         productionButton.setTitleColor(UIColor.black, for: .normal)
         
-        #if DEBUG
-        mailTextField.text = ""//YOUR_USER_NAME"
-        passwordTextField.text = ""//YOUR_PASSWORD"
-        #endif
+        mailTextField.text = User.userName == "" ? "DemoMerchant#153": User.userName
+        passwordTextField.text = User.password == "" ? "Dem@Merch@nt#2023": User.password
     }
     
     
@@ -98,6 +96,9 @@ class LoginVC: UIViewController {
         } else {
             textFieldValidationErrorLabelMail.text = ""
             textFieldValidationErrorLabelPassword.text = ""
+            User.userName = mailTextField.text! 
+            User.password = passwordTextField.text!
+
             if let viewController = storyboard?.instantiateViewController(identifier: "ViewController") as? ViewController {
                 viewController.userData = UserData(userName: mailTextField.text!, password: passwordTextField.text!, environment: self.environment)
                 self.navigationController?.pushViewController(viewController, animated: true)

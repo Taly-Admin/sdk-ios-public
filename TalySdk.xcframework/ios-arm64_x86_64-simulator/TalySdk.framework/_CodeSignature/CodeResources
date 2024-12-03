@@ -6,11 +6,11 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		h1CSKajor4yXSHZ/BaL8idfYGUw=
+		wRLsQfIIcX1DyEXc+FF3QXmfty8=
 		</data>
 		<key>Headers/TalySdk-Swift.h</key>
 		<data>
-		msuahA9bT3Rfz+zvkUWdTaCmuts=
+		Q2gsOTHTxrjjO1cSjXnQ95kXuUU=
 		</data>
 		<key>Headers/TalySdk.h</key>
 		<data>
@@ -18,7 +18,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		nK9egABRgpWXpFh/DtOY41YVp3A=
+		xPtFpRxW2Yvq+ZJ1FjbU71vKKcY=
 		</data>
 		<key>Manrope-Bold.ttf</key>
 		<data>
@@ -38,53 +38,53 @@
 		</data>
 		<key>Modules/TalySdk.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		DJteyxil0HB4EeAn+CmMtj/4C8w=
+		2Dy7dsqjjoxPEvVrDSt2lqkSRe4=
 		</data>
 		<key>Modules/TalySdk.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		tYmRpkRzAdaoxFu+jkZsZy5fhzs=
+		XwC4X0QPXLiJMRxwrOC2Un/kOhM=
 		</data>
 		<key>Modules/TalySdk.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		lAnkuTtNkxWbwbbhfpu4TW7LSHk=
+		kwM0z0a9HXpPopeeg1ntiY/6OpM=
 		</data>
 		<key>Modules/TalySdk.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		tYmRpkRzAdaoxFu+jkZsZy5fhzs=
+		XwC4X0QPXLiJMRxwrOC2Un/kOhM=
 		</data>
 		<key>Modules/TalySdk.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		Cz1k7XxC+yiGdc/5Snm+Y6qTwbY=
+		NJALK4pEP7uoBHIBgXETdK9nyvY=
 		</data>
 		<key>Modules/TalySdk.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		DJteyxil0HB4EeAn+CmMtj/4C8w=
+		2Dy7dsqjjoxPEvVrDSt2lqkSRe4=
 		</data>
 		<key>Modules/TalySdk.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		HC30srdQIjoGzcrnMTWMPRjSfZQ=
+		MibMbNVuO9WmASCnpbyjDB3BRYQ=
 		</data>
 		<key>Modules/TalySdk.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		vjmhJVq8irPQZhJMZJ+ParSe3e8=
+		28GfnidMcYUPAG7vTRQwBIXocuk=
 		</data>
 		<key>Modules/TalySdk.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		HC30srdQIjoGzcrnMTWMPRjSfZQ=
+		MibMbNVuO9WmASCnpbyjDB3BRYQ=
 		</data>
 		<key>Modules/TalySdk.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		KV5vTRNX0MtJr4DnTlZRP1Inh18=
+		hD5F/dV7lVnOPBOLFR/nPdXHmfA=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
-		afJmHuBENV2tLt8JO+zOLi6lBKM=
+		z7xOoGWddB31I0KraPKaVy7jgJQ=
 		</data>
 		<key>ar.lproj/Localizable.strings</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			G8xXOGRkj6forDUgp2miQ7oeEzw=
+			GVJjaJKAzcLLLgDRceAUOnre5Pw=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -93,7 +93,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			FmF5QMiDpb9sYDez3rlhJIB0dyQ=
+			HPEq+gT9XHOKENk9YYWNfHJ4DkI=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -105,14 +105,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			kiDnCZ7bcCHLUK2frqWpRcX38fnmRXb3X3h+DMcgkX4=
+			dlLW+2o9SdijLdSCyAanRzo2lDrdILCDvztYRliEJ30=
 			</data>
 		</dict>
 		<key>Headers/TalySdk-Swift.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			x7yYLzu2d7c7qbbhEkn9+EW8DTdN6rXRyCJR7k4+C1Q=
+			rABrYnE57MqSM0bzEc+gdEFxdGLZYp4fKAz5by3HLv4=
 			</data>
 		</dict>
 		<key>Headers/TalySdk.h</key>
@@ -154,84 +154,84 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			1q/+OlsmyxKU+CBCwfmaqDAx+w6Ts6DAquTioDkTwlE=
+			A1Q6q96JCFW2sK0hepUK8/nViy/BFRF9B4veSungrzA=
 			</data>
 		</dict>
 		<key>Modules/TalySdk.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			haFbdGLsD1F5gf3TSaAHGMAOhm2kLlZ/1SR8Qb2Y5Fc=
+			+iow6YxVKwsZrhjgI3OClkrquSRZ8+EQ494nKGv+PIA=
 			</data>
 		</dict>
 		<key>Modules/TalySdk.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ZxorBh0WuBgAEnTnMxWrbLfiaD+mr09l2VgRemm54+E=
+			h5XAO9cgvafK+VcnZeYFvntGjakV0WW7wLZcknV4sYo=
 			</data>
 		</dict>
 		<key>Modules/TalySdk.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			haFbdGLsD1F5gf3TSaAHGMAOhm2kLlZ/1SR8Qb2Y5Fc=
+			+iow6YxVKwsZrhjgI3OClkrquSRZ8+EQ494nKGv+PIA=
 			</data>
 		</dict>
 		<key>Modules/TalySdk.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			uRGlL09pTUOYAKaLPHS/wVWnKFWyfkN6S+PT71ESJPI=
+			XHKbYGvr6+tUtil6JxEaME3hWAfz9ErjTmY3NFN+Av0=
 			</data>
 		</dict>
 		<key>Modules/TalySdk.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			1q/+OlsmyxKU+CBCwfmaqDAx+w6Ts6DAquTioDkTwlE=
+			A1Q6q96JCFW2sK0hepUK8/nViy/BFRF9B4veSungrzA=
 			</data>
 		</dict>
 		<key>Modules/TalySdk.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			3aAXapeMbLMVGnOY9OfJJIAD3SU2LVU4fVfaT1qwgqg=
+			zQvqPwuCuHcOpbr6DGzAcDbhdKPAVQmhhKMgzytDh64=
 			</data>
 		</dict>
 		<key>Modules/TalySdk.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			QRI5SZMSqb3pM4gcGbttGyS07u4jJusRV0AySMrcTAI=
+			z6fo0AFyxeBSuingSB3Zt9TTnWoJosXGQGppYr7W/xM=
 			</data>
 		</dict>
 		<key>Modules/TalySdk.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			3aAXapeMbLMVGnOY9OfJJIAD3SU2LVU4fVfaT1qwgqg=
+			zQvqPwuCuHcOpbr6DGzAcDbhdKPAVQmhhKMgzytDh64=
 			</data>
 		</dict>
 		<key>Modules/TalySdk.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			M6ybu/ND4Ds0C6vuM9J8+LOHmzAcyf+lIwpbvI58aoM=
+			ed58MJiKSA4OvixRk1BzVyCfqAbtITEKc5v3xjbi4hc=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			dFYXyt0CsTGYnL3sKT9afV+fJfOM8ZLhJ4kUxGSgr18=
+			+njTx4ch8YkzHXduOO+5V8JwgdTXfcdWVXyx36y7u2k=
 			</data>
 		</dict>
 		<key>ar.lproj/Localizable.strings</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			SHvmVlrpjT0JpYZ940wQ+0Z2sSfXY3eU5iLUXE4Vhd0=
+			Pati8gH3ou2C/7bTQXLu1+GSdSCmaYTzpIfhnCkdYwE=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -240,7 +240,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			5Go5FDhdOsU+tgsNeGNWLgcnfDwu0TK86M3iaRLX/f4=
+			W7Rctsksfcu3iuyO3Kuhq3PAxFycorYSdPg5noCU1UM=
 			</data>
 			<key>optional</key>
 			<true/>

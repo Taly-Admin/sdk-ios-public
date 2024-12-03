@@ -99,8 +99,7 @@ class ViewController: UIViewController, BannerViewDelegate {
         stackView.alignment = .center
         stackView.contentMode = .scaleAspectFit
         stackView.spacing = 15
-        
-        //button.setTitle("Your Button Title", for: .normal)
+    
         checkMarkButtton.setImage(UIImage(named: "checkmark"), for: UIControl.State.normal)
         checkMarkButtton.addTarget(self, action: #selector(checkMarkButtonTapped), for: .touchUpInside)
         stackView.addArrangedSubview(checkMarkButtton)
@@ -144,9 +143,9 @@ class ViewController: UIViewController, BannerViewDelegate {
         if textField.text?.isEmpty == true {
             textFieldValidationErrorLabel.text = "Please enter amount"
             //showAlert(title: "Please enter amount")
-        } else if self.validateValue(Float(textField.text ?? "0") ?? 0)  == false {
+        } else if self.validateValue(textField.text ?? "0")  == false {
             self.setupDataOnTextFieldValueChanged()
-            textFieldValidationErrorLabel.text = "Amount should be greater than 1 and less than 5"
+            textFieldValidationErrorLabel.text = "Amount should be greater than 1"
             //   showAlert(title: "Please enter valid amount")
         } else {
             bannerViewHeight.constant = 58
@@ -160,8 +159,14 @@ class ViewController: UIViewController, BannerViewDelegate {
         }
     }
     
-    func validateValue(_ value: Float) -> Bool {
-        if value <= 0 || value > 5 {
+    func validateValue(_ value: String) -> Bool {
+        let numberStr: String = value
+            let formatter: NumberFormatter = NumberFormatter()
+        formatter.locale = NSLocale(localeIdentifier: "en") as Locale?
+            let final = formatter.number(from: numberStr)
+        let doubleNumber = Float(truncating: final!)
+            print("sett\(doubleNumber)")
+        if doubleNumber <= 0 {
             return false
         } else {
             return true
@@ -180,15 +185,15 @@ class ViewController: UIViewController, BannerViewDelegate {
         
         if textField.text?.isEmpty == true {
             textFieldValidationErrorLabel.text = "Please enter amount"
-        } else if self.validateValue(Float(textField.text ?? "0") ?? 0)  == false {
+        } else if self.validateValue(textField.text ?? "0")  == false {
             self.setupDataOnTextFieldValueChanged()
-            textFieldValidationErrorLabel.text = "Amount should be greater than 1 and less than 5"
+            textFieldValidationErrorLabel.text = "Amount should be greater than 1"
         } else {
             
             let tokenRequest = TokenRequest(username: userData.userName, password: userData.password, grantType: "password", scope: "api")
             
             let psp = PSP(isPspOrder: true, pspProvider: "", subMerchantId: 0, subMerchantName: "")
-            let orderItem = OrderItem(sku: "23433312436", type: "Digital", name: "lue shirt 998", itemDescription: "t-shirt made of cotton", quantity: 1, itemPrice: Double(self.textField.text!) ?? 0.00, imageUrl: "https://www.merchantwebsite.com/item1image.jpg", itemUrl: "https://www.merchantwebsite.com/item1.html", itemUnit: "gm", itemSize: "32", itemColor: "white", itemGender: "kids", itemBrand: "Adidas", itemCategory: "Men>Men's Shoes>Running", currency: "KWD")
+            let orderItem = OrderItem(sku: "23433312436", type: "Digital", name: "lue shirt 998", itemDescription: "t-shirt made of cotton", nameArabic: "lue shirt 998", itemDescriptionArabic: "t-shirt made of cotton", quantity: 1, itemPrice: Double(self.textField.text ?? "") ?? 0.00, imageUrl: "https://www.merchantwebsite.com/item1image.jpg", itemUrl: "https://www.merchantwebsite.com/item1.html", itemUnit: "gm", itemSize: "32", itemColor: "white", itemGender: "kids", itemBrand: "Adidas", itemCategory: "Men>Men's Shoes>Running", currency: "KWD")
             
             let customerDetail = CustomerDetails(firstName: "Ahmaa", lastName: "Ali", gender: "Male", phoneNumber: "502223333", customerEmail: "user@example.com", registeredSince: "2023-07-22", loyaltyMember: true, loyaltyLevel: "VIP")
             
@@ -240,9 +245,9 @@ extension ViewController: UITextFieldDelegate {
             if textField.text?.isEmpty == true {
                 textFieldValidationErrorLabel.text = "Please enter amount"
                 //showAlert(title: "Please enter amount")
-            } else if self.validateValue(Float(textField.text ?? "0") ?? 0)  == false {
+            } else if self.validateValue(textField.text ?? "0")  == false {
                 self.setupDataOnTextFieldValueChanged()
-                textFieldValidationErrorLabel.text = "Amount should be greater than 1 and less than 5"
+                textFieldValidationErrorLabel.text = "Amount should be greater than 1"
                 //   showAlert(title: "Please enter valid amount")
             } else {
                 bannerViewHeight.constant = 58

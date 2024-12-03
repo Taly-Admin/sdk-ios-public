@@ -1,19 +1,21 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.8 (swiftlang-5.8.0.124.2 clang-1403.0.22.11.100)
-// swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name TalySdk
-// swift-module-flags-ignorable: -enable-bare-slash-regex
+// swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
+// swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name TalySdk
 import CoreTelephony
+import DeveloperToolsSupport
 import Foundation
 import Network
 import SQLite3
 import StoreKit
 import Swift
+import SwiftUI
 import SystemConfiguration
 @_exported import TalySdk
 import UIKit
 import WebKit
 import _Concurrency
 import _StringProcessing
+import _SwiftConcurrencyShims
 public protocol MixpanelType {
   func isValidNestedTypeAndValue() -> Swift.Bool
   func equals(rhs: any TalySdk.MixpanelType) -> Swift.Bool
@@ -225,7 +227,7 @@ public struct OrderDetail : Swift.Codable {
   public let paymentPlanName: Swift.String?
   public let branchType: Swift.String
   public let branchName: Swift.String
-  public let settlementType: Swift.String
+  public let settlementType: Swift.String?
   public let totalReturnAmount: Swift.Double?
   public let totalRefundAmount: Swift.Double?
   public let merchantId: Swift.Int
@@ -252,7 +254,7 @@ public struct OrderDetails : Swift.Codable {
   public let paymentPlanName: Swift.String?
   public let branchType: Swift.String
   public let branchName: Swift.String
-  public let settlementType: Swift.String
+  public let settlementType: Swift.String?
   public let totalReturnAmount: Swift.Double?
   public let totalRefundAmount: Swift.Double?
   public let merchantId: Swift.Int
@@ -303,10 +305,16 @@ public struct TokenRequest : Swift.Codable {
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
+public protocol MixpanelProxyServerDelegate : AnyObject {
+  func mixpanelResourceForProxyServer(_ name: Swift.String) -> TalySdk.ServerProxyResource?
+}
 public protocol MixpanelDelegate : AnyObject {
   func mixpanelWillFlush(_ mixpanel: TalySdk.MixpanelInstance) -> Swift.Bool
 }
 public typealias Properties = [Swift.String : any TalySdk.MixpanelType]
+public struct ProxyServerConfig {
+  public init?(serverUrl: Swift.String, delegate: (any TalySdk.MixpanelProxyServerDelegate)? = nil)
+}
 @_hasMissingDesignatedInitializers open class MixpanelInstance : Swift.CustomDebugStringConvertible {
   open var apiToken: Swift.String
   weak open var delegate: (any TalySdk.MixpanelDelegate)?
@@ -330,10 +338,15 @@ public typealias Properties = [Swift.String : any TalySdk.MixpanelType]
     get
     set
   }
+  open var flushBatchSize: Swift.Int {
+    get
+    set
+  }
   open var serverURL: Swift.String {
     get
     set
   }
+  weak open var proxyServerDelegate: (any TalySdk.MixpanelProxyServerDelegate)?
   open var debugDescription: Swift.String {
     get
   }
@@ -460,7 +473,7 @@ public struct PSP : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct OrderItem : Swift.Codable {
-  public init(sku: Swift.String, type: Swift.String? = nil, name: Swift.String, itemDescription: Swift.String? = nil, quantity: Swift.Int, itemPrice: Swift.Double, imageUrl: Swift.String? = nil, itemUrl: Swift.String? = nil, itemUnit: Swift.String? = nil, itemSize: Swift.String? = nil, itemColor: Swift.String? = nil, itemGender: Swift.String? = nil, itemBrand: Swift.String? = nil, itemCategory: Swift.String? = nil, currency: Swift.String? = nil)
+  public init(sku: Swift.String, type: Swift.String? = nil, name: Swift.String, itemDescription: Swift.String? = nil, nameArabic: Swift.String, itemDescriptionArabic: Swift.String? = nil, quantity: Swift.Int, itemPrice: Swift.Double, imageUrl: Swift.String? = nil, itemUrl: Swift.String? = nil, itemUnit: Swift.String? = nil, itemSize: Swift.String? = nil, itemColor: Swift.String? = nil, itemGender: Swift.String? = nil, itemBrand: Swift.String? = nil, itemCategory: Swift.String? = nil, currency: Swift.String? = nil)
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
@@ -509,11 +522,18 @@ extension Swift.String {
 @_hasMissingDesignatedInitializers open class Mixpanel {
   @discardableResult
   open class func initialize(token apiToken: Swift.String, trackAutomaticEvents: Swift.Bool, flushInterval: Swift.Double = 60, instanceName: Swift.String? = nil, optOutTrackingByDefault: Swift.Bool = false, useUniqueDistinctId: Swift.Bool = false, superProperties: TalySdk.Properties? = nil, serverURL: Swift.String? = nil) -> TalySdk.MixpanelInstance
+  @discardableResult
+  open class func initialize(token apiToken: Swift.String, trackAutomaticEvents: Swift.Bool, flushInterval: Swift.Double = 60, instanceName: Swift.String? = nil, optOutTrackingByDefault: Swift.Bool = false, useUniqueDistinctId: Swift.Bool = false, superProperties: TalySdk.Properties? = nil, proxyServerConfig: TalySdk.ProxyServerConfig) -> TalySdk.MixpanelInstance
   open class func getInstance(name: Swift.String) -> TalySdk.MixpanelInstance?
   open class func mainInstance() -> TalySdk.MixpanelInstance
   open class func setMainInstance(name: Swift.String)
   open class func removeInstance(name: Swift.String)
   @objc deinit
+}
+public struct ServerProxyResource {
+  public init(queryItems: [Foundation.URLQueryItem]? = nil, headers: [Swift.String : Swift.String])
+  public let queryItems: [Foundation.URLQueryItem]?
+  public let headers: [Swift.String : Swift.String]
 }
 @objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class PlaceOrderView : UIKit.UIViewController, WebKit.WKUIDelegate {
   @_Concurrency.MainActor(unsafe) weak public var delegate: (any TalySdk.PlaceOrderDelegate)?
@@ -543,6 +563,7 @@ public enum URLPath {
   case createOrder
   case getOrderDetail(id: Swift.Int)
   case bannerRequest
+  case howItWorks(price: Swift.String, language: Swift.String)
 }
 extension TalySdk.URLPath {
   public var path: Swift.String {
