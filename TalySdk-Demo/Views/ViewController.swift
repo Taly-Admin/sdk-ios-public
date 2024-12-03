@@ -109,7 +109,7 @@ class ViewController: UIViewController, BannerViewDelegate {
         
         let logoImage = UIImageView()
         //button.setTitle("Your Button Title", for: .normal)
-        logoImage.image = UIImage(named: "telyLogo1")
+        logoImage.image = UIImage(named: "taly_logo_small")
         logoImage.contentMode = .scaleAspectFit
         stackView.addArrangedSubview(logoImage)
         logoImage.translatesAutoresizingMaskIntoConstraints = false
