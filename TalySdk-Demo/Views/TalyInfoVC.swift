@@ -2,15 +2,16 @@
 //  TalyInfoVC.swift
 //  DemoApp
 //
-//  Created by Mehul Goswami on 18/08/23.
+//  Created by Taly on 18/08/23.
 //
 
 import Foundation
-import WebKit
+@preconcurrency import WebKit
 import TalySdk
 
 class TalyInfoVC: UIViewController, WKUIDelegate {
     
+    // MARK: - variables
     let activityIndicator = UIActivityIndicatorView(style: .large)
     let url: String?
     
@@ -25,15 +26,11 @@ class TalyInfoVC: UIViewController, WKUIDelegate {
         return webView
     }()
     
-    public init(url: String) {
-        self.url = url
-        super.init(nibName: nil, bundle: nil)
-    }
-    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - view methods
     public override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -54,26 +51,31 @@ class TalyInfoVC: UIViewController, WKUIDelegate {
             let request = URLRequest(url: url)
             webView.load(request)
         }
-        
     }
     
-    @objc func closedClicked() {
-        self.dismiss(animated: true)
+    public init(url: String) {
+        self.url = url
+        super.init(nibName: nil, bundle: nil)
     }
     
+    // MARK: loader
     func startActivityIndicater() {
         self.webView.addSubview(activityIndicator)
         activityIndicator.centerXYAnchor(to: self.webView)
         activityIndicator.startAnimating()
-        
     }
     
     func stopActivityIndicater() {
         activityIndicator.stopAnimating()
     }
     
+    // MARK: User interaction
+    @objc func closedClicked() {
+        self.dismiss(animated: true)
+    }
 }
 
+// MARK: - delegates
 extension TalyInfoVC: WKNavigationDelegate {
     public func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Swift.Void) {
         

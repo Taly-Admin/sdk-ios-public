@@ -2,65 +2,54 @@
 //  LoginVC.swift
 //  PaymentDemoApp
 //
-//  Created by Mehul Goswami on 11/07/23.
+//  Created by Taly on 11/07/23.
 //
 
 import UIKit
 
 class LoginVC: UIViewController {
     
-    var activeField: UITextField!
-    
+    // MARK: - variables
     @IBOutlet weak var mailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var signInBtn: UIButton!
     @IBOutlet weak var showPasswordButton: UIButton!
     @IBOutlet weak var textFieldValidationErrorLabelMail: UILabel!
     @IBOutlet weak var textFieldValidationErrorLabelPassword: UILabel!
-    var environment: String = "Development"
     
     @IBOutlet weak var enviromentView: UIView!
     @IBOutlet weak var devlopmentButton: UIButton!
     @IBOutlet weak var productionButton: UIButton!
     
-    
+    // MARK: - view methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.navigationController?.isNavigationBarHidden = true
-        showPasswordButton.contentMode = .scaleAspectFit
-        if #available(iOS 13.0, *) {
-            showPasswordButton.setImage(UIImage(systemName: "eye"), for: .normal)
-        } else {
-            // Fallback on earlier versions
+        setScreen()
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
+    // MARK: set screen and data
+    func setScreen(){
+
+        let allTextField = self.view.getTextfield(view: self.view)
+        for txtField in allTextField
+        {
+            txtField.setLeftPaddingPoints(10)
+       //     txtField.addDoneButtonOnKeyboard()
+            txtField.delegate = self
         }
         
         showPasswordButton.addTarget(self, action: #selector(showPasswordButtonTapped), for: .touchUpInside)
-        showPasswordButton.tintColor = .gray
         
-        signInBtn.layer.cornerRadius = 10
-        
-        mailTextField.delegate = self
-        passwordTextField.delegate = self
-        
-        passwordTextField.layer.cornerRadius = 5
-        passwordTextField.clipsToBounds = true
-        passwordTextField.layer.borderWidth = 1.0
-        passwordTextField.layer.borderColor = UIColor.black.cgColor
-        passwordTextField.setLeftPaddingPoints(10)
-        
-        mailTextField.layer.cornerRadius = 5
-        mailTextField.clipsToBounds = true
-        mailTextField.layer.borderWidth = 1.0
-        mailTextField.layer.borderColor = UIColor.black.cgColor
-        mailTextField.setLeftPaddingPoints(10)
-        
-        enviromentView.layer.cornerRadius = 5
-        enviromentView.clipsToBounds = true
-        enviromentView.layer.borderWidth = 1.0
-        enviromentView.layer.borderColor = UIColor.black.cgColor
-        
-        devlopmentButton.backgroundColor = UIColor.hexStringToUIColor(hex: "#233756")
+        devlopmentButton.backgroundColor = UIColor.init(named: "appTheme")
         devlopmentButton.setTitleColor(UIColor.white, for: .normal)
         productionButton.setTitleColor(UIColor.black, for: .normal)
         
@@ -68,66 +57,51 @@ class LoginVC: UIViewController {
         passwordTextField.text = User.password == "" ? "Dem@Merch@nt#2023": User.password
     }
     
-    
-    override func viewDidAppear(_ animated: Bool) {
-        
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-    
-    @objc private func showPasswordButtonTapped() {
-        passwordTextField.isSecureTextEntry.toggle()
-        let imageName = passwordTextField.isSecureTextEntry ? "eye" : "eye.slash"
-        if #available(iOS 13.0, *) {
-            showPasswordButton.setImage(UIImage(systemName: imageName), for: .normal)
-        } else {
-            // Fallback on earlier versions
-        }
-    }
-    
+    // MARK: user interaction
     @IBAction func loginBtnAction(_ sender: UIButton) {
         if mailTextField.text?.isEmpty == true {
-            textFieldValidationErrorLabelMail.text = "Please enter email"
+            textFieldValidationErrorLabelMail.text = ErrorMsg.userNameRequired.rawValue
         } else if passwordTextField.text?.isEmpty == true {
             textFieldValidationErrorLabelMail.text = ""
-            textFieldValidationErrorLabelPassword.text = "Please enter Password"
+            textFieldValidationErrorLabelPassword.text = ErrorMsg.PasswordRequired.rawValue
         } else {
             textFieldValidationErrorLabelMail.text = ""
             textFieldValidationErrorLabelPassword.text = ""
             User.userName = mailTextField.text! 
             User.password = passwordTextField.text!
-
-            if let viewController = storyboard?.instantiateViewController(identifier: "ViewController") as? ViewController {
-                viewController.userData = UserData(userName: mailTextField.text!, password: passwordTextField.text!, environment: self.environment)
-                self.navigationController?.pushViewController(viewController, animated: true)
-            }
-            
+            self.navigateToNextScreen()
         }
     }
     
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
+    @objc private func showPasswordButtonTapped() {
+        passwordTextField.isSecureTextEntry.toggle()
+        showPasswordButton.isSelected = !passwordTextField.isSecureTextEntry
     }
     
     @IBAction func environmentBtnAction(_ sender: UIButton) {
-        if sender.titleLabel?.text == "Development" {
-            environment = "Development"
+        if sender == devlopmentButton {
+            appEnvironment = .dev
             productionButton.backgroundColor = UIColor.white
             productionButton.setTitleColor(UIColor.black, for: .normal)
-        } else if sender.titleLabel?.text == "Production" {
-            environment = "Production"
+        } else {
+            appEnvironment = .prd
             devlopmentButton.backgroundColor = UIColor.white
             devlopmentButton.setTitleColor(UIColor.black, for: .normal)
         }
         
-        sender.backgroundColor = UIColor.hexStringToUIColor(hex: "#233756")
+        sender.backgroundColor = UIColor.init(named: "appTheme")
         sender.setTitleColor(UIColor.white, for: .normal)
     }
     
+    func navigateToNextScreen(){
+        if let viewController = storyboard?.instantiateViewController(identifier: "PlaceOrderVC") as? PlaceOrderVC {
+            viewController.userData = UserData(userName: mailTextField.text!, password: passwordTextField.text!, environment: appEnvironment.rawValue)
+            self.navigationController?.pushViewController(viewController, animated: true)
+        }
+    }
 }
 
+// MARK: - delegates
 extension LoginVC: UITextFieldDelegate {
     // text field Delegate
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -140,30 +114,5 @@ extension LoginVC: UITextFieldDelegate {
             textField.resignFirstResponder()
         }
         return false
-    }
-    
-    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
-        activeField = textField
-        return true
-    }
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        activeField = textField
-    }
-    
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        activeField = nil
-    }
-    
-}
-
-struct UserData {
-    var userName: String
-    var password: String
-    var environment: String
-    
-    init(userName: String, password: String, environment: String) {
-        self.userName = userName
-        self.password = password
-        self.environment = environment
     }
 }
