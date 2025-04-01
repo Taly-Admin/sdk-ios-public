@@ -70,7 +70,7 @@ class PlaceOrderVC: UIViewController {
         formatter.locale = NSLocale(localeIdentifier: "en") as Locale?
         let final = formatter.number(from: numberStr) ?? 0
         let doubleNumber = Float(truncating: final)
-        debugPrint("fomatted number: \(doubleNumber)")
+//        debugPrint("fomatted number: \(doubleNumber)")
         let validateNum = doubleNumber <= 0 ? false : true
         return validateNum
     }
